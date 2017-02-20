@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body ng-app="KioskApp">
+    <div ng-controller="PartsController">
+        <!--
+        <div ng-include="'./views/partials/numpad.html'"></div>
+        -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2 flex md-truncate>Spokane Create Kiosk</h2>
+            </div>
+        </md-toolbar>
+
+        <md-content>
+            <md-list flex>
+                <md-subheader class="md-no-sticky">Available Parts</md-subheader>
+                <md-list-item class="md-3-line" ng-repeat="item in partsList" ng-click="null">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{ item.name }}</h3>
+                        <h4>Type: {{ item.type }}</h4>
+                        <p>Description: {{ item.description }}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+
+    <script> require('../node_modules/angular/angular.min.js') </script>
+    <script> require('../node_modules/angular-animate/angular-animate.min.js') </script>
+    <script> require('../node_modules/angular-messages/angular-messages.min.js') </script>
+    <script> require('../node_modules/angular-aria/angular-aria.min.js') </script>
+    <script> require('../node_modules/angular-material/angular-material.min.js') </script>
+    <script> require('./app.js') </script>
+</body>

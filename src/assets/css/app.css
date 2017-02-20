@@ -1,0 +1,14 @@
+/** Kiosk App Style **/
+
+.sc-numpad {
+    font-size: 22;
+    max-width: 16em;
+    max-height: 20em;
+}
+
+
+.md-button.sc-square-button {
+    font-size: 22;
+    height: 5em;
+    width: 5em;
+}

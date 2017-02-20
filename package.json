@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "The Kiosk App",
+  "main": "main.js",
+  "repository": "",
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha"
+  },
+  "keywords": [
+    "kiosk"
+  ],
+  "author": "Nathan Cutler, John Mark Wilkinson",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-aria": "^1.5.11",
+    "angular-material": "^1.1.3",
+    "angular-messages": "^1.6.2",
+    "bluebird": "^3.4.7",
+    "dotenv": "^4.0.0",
+    "electron": "^1.4.15",
+    "mongodb": "^2.2.24"
+  }
+}

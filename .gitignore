@@ -1,0 +1,7 @@
+# NPM Packages
+node_modules/
+
+# Google Drive Stuff
+**/desktop.ini
+
+electron-quick-start
