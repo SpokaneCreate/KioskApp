@@ -5,3 +5,6 @@ node_modules/
 **/desktop.ini
 
 electron-quick-start
+
+# Environment Variable file
+.env
