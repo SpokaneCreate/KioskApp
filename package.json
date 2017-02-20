@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The Kiosk App",
   "main": "main.js",
-  "repository": "",
+  "repository": "https://github.com/SpokaneCreate/KioskApp.git",
   "scripts": {
     "start": "electron .",
     "test": "mocha"
@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "~1.5.9",
+    "angular-animate": "~1.5",
     "angular-aria": "~1.5.11",
     "angular-material": "~1.1.3",
     "angular-messages": "~1.6.2",
