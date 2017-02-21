@@ -8,6 +8,7 @@ const PartsController = require('./controllers/PartsController');
 const DatabaseCollection = require('./db/DatabaseCollection');
 const DbAccess = require('./db/DbAccess');
 const Promise = require('bluebird');
+const remote = require('electron').remote;
 
 angular.module('KioskApp', [
     'ngMessages',
@@ -16,7 +17,7 @@ angular.module('KioskApp', [
 .provider('dbAccess', function () {
     let dbAccess = null;
 
-    let dbAccessPromise = mongodb.connect(process.env.MONGODB_URL)
+    let dbAccessPromise = mongodb.connect(remote.process.env.MONGODB_URL)
        .then( mongo =>
        {
            dbAccess = new DbAccess(mongo);
