@@ -12,3 +12,17 @@
     height: 5em;
     width: 5em;
 }
+
+.sc-touchscreen-verify {
+    height: 100%;
+}
+
+.sc-one-third-size {
+    height: 33%;
+    width: 33%;
+    display: inline-block;
+}
+
+.sc-one-third-margin {
+    margin: 30%;
+}

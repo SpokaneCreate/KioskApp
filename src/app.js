@@ -5,6 +5,7 @@
 
 const mongodb = require('mongodb');
 const PartsController = require('./controllers/PartsController');
+const TouchscreenController = require('./controllers/TouchscreenController');
 const DatabaseCollection = require('./db/DatabaseCollection');
 const DbAccess = require('./db/DbAccess');
 const Promise = require('bluebird');
@@ -37,4 +38,5 @@ angular.module('KioskApp', [
         return new DatabaseCollection(db, 'parts');
     });
 })
-.controller('PartsController', PartsController);
+.controller('PartsController', PartsController)
+.controller('TouchscreenController', TouchscreenController);

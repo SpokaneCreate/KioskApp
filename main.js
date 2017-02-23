@@ -11,6 +11,8 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+const DEBUG = process.env.DEBUG && process.env.DEBUG != 0;
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -21,15 +23,21 @@ function createWindow () {
 
   mainWindow.setFullScreen(true);
 
+  var filename = 'index.html';
+
+  if(process.env.MODE == 'verify') {
+      filename = 'touchscreen_verify.html';
+  }
+
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'src', 'index.html'),
+    pathname: path.join(__dirname, 'src', filename),
     protocol: 'file:',
     slashes: true
 }));
 
   // Open the DevTools.
-  if( process.env.DEBUG ) mainWindow.webContents.openDevTools()
+  if( DEBUG ) mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
