@@ -5,6 +5,10 @@ class DatabaseCollection {
         this.collection = collection;
     }
 
+    findUnique(fields){
+      return this.db.collection(this.collection).distinct(fields)
+    }
+
     findOne(recordId) {
         return this.db.collection(this.collection).findOne({_id: this.db.getObjectId(recordId)});
     }

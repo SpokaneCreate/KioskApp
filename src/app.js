@@ -13,7 +13,8 @@ const remote = require('electron').remote;
 
 angular.module('KioskApp', [
     'ngMessages',
-    'ngMaterial'
+    'ngMaterial',
+    'angAccordion'
 ])
 .provider('dbAccess', function () {
     let dbAccess = null;
@@ -24,10 +25,11 @@ angular.module('KioskApp', [
            dbAccess = new DbAccess(mongo);
            return dbAccess;
        });
+       Promise.assimilate = Promise.resolve;
 
     this.$get = function() {
         if(!dbAccess) {
-            return dbAccessPromise;
+            return Promise.assimilate(dbAccessPromise);
         } else {
             return Promise.resolve(dbAccess);
         }
