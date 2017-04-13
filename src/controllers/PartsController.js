@@ -14,14 +14,21 @@ function PartsController($scope, scPartsCollection) {
         }
     };
 
+    $scope.includesAll = function(part, key) {
+        return $scope.searchText.split(" ")
+        .reduce( (accumulation, piece) => {
+            return accumulation && part[key].toLowerCase().includes(piece.toLowerCase());
+        }, true);
+    };
+
     $scope.search = function(part, index, array) {
         return Object.keys(part).filter( (key) => {
             return key != "_id";
         })
         .reduce( (accumulation, key) => {
-            return accumulation || part[key].includes($scope.searchText);
+            return accumulation || $scope.includesAll(part, key);
         }, false);
-    }
+    };
 
     $scope.loadPartsList = function() {
         scPartsCollection.then( (collection) => {
