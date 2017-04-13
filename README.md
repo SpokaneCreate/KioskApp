@@ -16,15 +16,18 @@ This project was built for [Spokane Create's](http://spokanecreate.org/) parts k
 The KioskApp was built to allow users to search for parts and track part inventory.
 
 ## Installation
-
->> npm install
+```
+npm install
+```
 Then copy example.env to .env
->> npm start
+```
+npm start
+```
 
 ## Contributors
 
-John Mark Wilkinson
-Nathan Cutler
+* John Mark Wilkinson
+* Nathan Cutler
 
 ## License
 
