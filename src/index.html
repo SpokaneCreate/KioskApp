@@ -4,26 +4,16 @@
     <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 
-<body ng-app="KioskApp">
-    <div ng-controller="PartsController">
-        <!--
-        <div ng-include="'./views/partials/numpad.html'"></div>
-        -->
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <h2 flex md-truncate>Spokane Create Kiosk</h2>
-            </div>
-        </md-toolbar>
+<body ng-app="KioskApp" layout="column">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Spokane Create Kiosk</h2>
+        </div>
+    </md-toolbar>
 
+    <div ng-controller="PartsController" layout="row" flex>
+        <ng-include src="'./views/partials/sidebar.html'" layout>
         <md-content>
-            <input ng-model="searchText">
-            <ang-accordion>
-                <collapsible-item item-title="{{type}}" ng-repeat="(type, parts) in partsContainer.values">
-                    <div ng-repeat="part in parts | filter:search" >
-                        {{ part.name }}: Description: {{ part.description }}
-                    </div>
-                </collapsible-item>
-            </ang-accordion>
         </md-content>
     </div>
 
