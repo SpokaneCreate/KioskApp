@@ -1,0 +1,19 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+    <md-input-container class="sc-parts-filter">
+        <input ng-model="searchText" aria-label="search">
+    </md-input-container>
+    <md-content class="sc-parts-list">
+        <section ng-repeat="(type, parts) in partsContainer.values">
+            <md-subheader class="sc-parts-category">{{ type }}</md-subheader>
+            <md-list flex>
+                <md-list-item class="md-3-line" ng-repeat="part in parts" ng-click="null">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{ part.name }}</h3>
+                        <h4>{{ part.description }}</h4>
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
+            </md-list>
+        </section>
+    </md-content>
+</md-sidenav>

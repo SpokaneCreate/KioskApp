@@ -1,5 +1,9 @@
 /** Kiosk App Style **/
 
+body {
+    height: 100%;
+}
+
 .sc-numpad {
     font-size: 22;
     max-width: 16em;
@@ -25,4 +29,21 @@
 
 .sc-one-third-margin {
     margin: 30%;
+}
+
+.sc-parts-category {
+    background-color: rgb(130,177,255);
+    font-size: 1.3em;
+}
+
+.sc-parts-filter {
+    position: sticky;
+    height: 56px;
+    margin: 0px;
+    padding: 0px 16px;
+}
+
+.sc-parts-filter input {
+    margin-top: 14px;
+    width: 100%;
 }
